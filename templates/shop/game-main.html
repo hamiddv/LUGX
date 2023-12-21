@@ -1,0 +1,35 @@
+{% load static %}
+<div id="games-container" class="row g-4 mt-5 pt-4">
+    {% for game in games %}
+    <div class="col-lg-3 js-game col-md-6 col-12 {{game.category}}">
+        <a href="#" class="page-link">
+            <article  class="mt-3 trend-games__cart rounded-5">
+                <figure class="m-0 position-relative">
+                    <img width="300" height="220" class="rounded-5 trend-games__cart__image"
+                         src="{% get_media_prefix %}{{game.image}}" alt="game"/>
+                    <div class="fw-bold d-flex flex-column align-items-end image-transform rounded-4 text-white image__price position-absolute end-0 top-0">
+                        {% if game.discount_percent is not None %}
+                        <span class="trend-games__cart__prev-price">${{game.price}}</span>
+                        <span class="m-0 fw-bold fs-6">${{game.discounted_price}}</span>
+                        {% else %}
+                        <span class="m-0 fw-bold fs-5">${{game.price}}</span>
+                        {% endif %}
+                    </div>
+                </figure>
+                <div class="trend-games__cart__detail">
+                    <span class="trend-games__cart__detail__genre">{{game.category}}</span>
+                    <div class="d-flex">
+                        <span class="fs-5 fw-bold pt-2 trend-games__cart__title">{{game.name}}</span>
+                        <span class="trend-games__cart__buy rounded-circle ms-auto ">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white"
+                         class="bi bi-bag-fill" viewBox="0 0 16 16">
+                            <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1m3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4z"/>
+                    </svg>
+                </span>
+                    </div>
+                </div>
+            </article>
+        </a>
+    </div>
+    {% endfor %}
+</div>

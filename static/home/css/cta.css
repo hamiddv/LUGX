@@ -1,0 +1,12 @@
+.shop-cart {
+    background: #eeeeee;
+    padding: 5rem;
+}
+
+.shop-cart__caption {
+    color: var(--color-muted);
+}
+
+.shop-cart__image {
+    width: 511px;
+}

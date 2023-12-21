@@ -1,0 +1,33 @@
+.shop__btn-active{
+    color: white;
+    background: var(--background-red);
+}
+.show__btn{
+    font-size: calc(.5rem + .5vw);
+    display: inline-block;
+}
+
+.nav-indicators__item{
+    background: #eee;
+    color: #1e1e1e;
+    font-weight: 600;
+    font-size: 15px;
+    height: 40px;
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all ease .5s;
+    user-select: none;
+}
+
+.nav-indicators__item-active{
+    background: var(--background-blue);
+    color: white;
+}
+
+.nav-indicators__item:hover{
+    background: var(--background-blue);
+    color: white;
+}

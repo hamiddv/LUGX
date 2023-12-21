@@ -1,0 +1,23 @@
+.feature{
+    background: white;
+    transform: translateY(-105px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 15rem;
+}
+
+.feature__image-container{
+    background: var(--background-blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 6rem;
+    height: 6rem;
+}
+
+.feature__image-container__image{
+    width: 44px;
+    height: 44px;
+}

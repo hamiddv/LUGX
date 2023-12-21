@@ -1,0 +1,16 @@
+<header class="d-flex justify-content-center">
+
+    <ul class="d-flex flex-wrap p-0 justify-content-center list-group-horizontal">
+        <li class="list-group-item  px-md-3 px-1 mt-3">
+            <button data-filter="js-game" class="shop__btn-active js-filter-game show__btn button button-small">SHOW ALL</button>
+        </li>
+        {% for category in categories %}
+        <li class="list-group-item  px-md-3 px-1 mt-3">
+            <button data-filter="{{category.name}}" class="button js-filter-game button-small show__btn button-red-text-hover">
+                {{category.name}}
+            </button>
+        </li>
+        {% endfor %}
+    </ul>
+
+</header>

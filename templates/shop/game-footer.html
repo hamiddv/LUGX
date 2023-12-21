@@ -1,0 +1,40 @@
+{% load django_template_maths %}
+<footer class="d-flex justify-content-center">
+    {% if count is not 0 or page > last_count %}
+    <ul class="d-flex flex-wrap justify-content-center p-0 list-group-horizontal nav-indicators">
+        
+            {% if page == 1 %}
+            <a href="#" style="text-decoration:none;color:black">
+                <li class="list-group px-4 mt-3 rounded-circle nav-indicators__item mx-2"><</li>
+            </a>
+            {% else %}
+            <a href="/our-shop/?page={{page|sub:1}}" style="text-decoration:none;color:black">
+                <li class="list-group px-4 mt-3 rounded-circle nav-indicators__item mx-2"><</li>
+            </a>
+            {% endif %}
+        
+        {% for count in count_range %}
+            {% if count == page %}
+            <a href="#" style="text-decoration:none;color:black"><li class="list-group px-4 mt-3 rounded-circle nav-indicators__item mx-2 nav-indicators__item-active">
+                  {{count}}  
+            </li></a>                
+            {% else %}
+                
+                    <a href="/our-shop/?page={{count}}" style="text-decoration:none;color:black">
+                        <li class="list-group px-4 mt-3 rounded-circle nav-indicators__item mx-2">{{count}}</li>
+                    </a>
+                
+            {% endif %}
+        {% endfor %}
+            {% if page <= last_count %}
+            <a href="#" style="text-decoration:none;color:black">
+                <li class="list-group px-4 mt-3 rounded-circle nav-indicators__item mx-2">></li>
+            </a>
+            {% else %}
+            <a href="/our-shop/?page={{page|add:1}}" style="text-decoration:none;color:black">
+                <li class="list-group px-4 mt-3 rounded-circle nav-indicators__item mx-2">></li>
+            </a>
+            {% endif %}
+    </ul>
+    {% endif %}
+</footer>

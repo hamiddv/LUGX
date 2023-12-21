@@ -1,0 +1,45 @@
+.hero-section {
+    background-image: url("/static/home/images/banner-bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-bottom-right-radius: 150px;
+    border-bottom-left-radius: 150px;
+}
+
+
+.banner__article {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.image-transform {
+    transform: translate(-25px, 25px);
+
+}
+
+.banner__image__discount {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: var(--background-red);
+}
+
+.image__price {
+    background: var(--background-low-blue);
+    padding: .5rem 1rem;
+}
+
+.banner__row {
+    padding-bottom: 16rem;
+    padding-top: 16rem;
+}
+
+.banner__article__gaming-underline-image {
+    width: calc(7rem + 7vw)
+}

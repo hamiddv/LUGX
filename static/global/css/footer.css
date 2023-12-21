@@ -1,0 +1,13 @@
+.main-footer {
+    height: 10rem;
+    margin-top: 150px;
+    background: url("/static/home/images/footer-bg.jpg") no-repeat;
+    background-size: cover;
+    border-top-right-radius: 150px;
+    border-top-left-radius: 150px;
+}
+
+.main-footer__text {
+    font-size: clamp(.75rem + .5vw, 1rem, .75rem + 1vw);
+    width: 75%;
+}

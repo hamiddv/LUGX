@@ -1,0 +1,57 @@
+{%load static%}
+<div id="main-header-container" style="position:absolute;top: 20px" class="w-100 rounded-bottom-5 z-3">
+    <div class="container">
+        <header class="main-header">
+            <div id="main-header-row" class="row px-3 px-sm-0">
+                <div class="col-12">
+                    <nav class="d-flex align-items-center">
+                        <a href="#">
+                            <img width="159" height="60" alt="logo" class="main-header__logo"
+                                 src={% static "home/images/logo.png" %}/>
+                        </a>
+                        <button class="ms-auto d-lg-none d-block main-header__offcanvas__trigger"
+                                type="button"
+                                data-bs-target="#main-header__offcanvas"
+                                data-bs-toggle="offcanvas">
+                            <span class="main-header__offcanvas__trigger__text"></span>
+                        </button>
+                        <aside id="main-header__offcanvas"
+                               class="main-header__offcanvas main-header__offcanvas-sm offcanvas-lg offcanvas-start">
+                            <div class="offcanvas-header w-100">
+                                <h5 class="offcanvas-title text-white">LUGX</h5>
+                                <button type="button" class="btn-close-white btn-close"
+                                        data-bs-target="#main-header__offcanvas"
+                                        data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                            </div>
+                            <div class="offcanvas-body w-100">
+                                <ul class="main-header__offcanvas__nav main-header__offcanvas__nav-sm m-0 flex-lg-row flex-column">
+                                    <li class="main-header__nav__item main-header__nav__item-sm">
+                                        <a class="main-header__links main-header__links-sm"
+                                           href="../">Home</a>
+                                    </li>
+                                    <li class="main-header__nav__item main-header__nav__item-sm"><a
+
+                                            class="main-header__links main-header__links-sm active" href="#">Our
+                                        Shop</a>
+                                    </li>
+                                    <li class="main-header__nav__item main-header__nav__item-sm"><a
+
+                                            class="main-header__links main-header__links-sm" href="../contact-us/">Contact
+                                        Us</a>
+                                    </li>
+                                    <li class="main-header__nav__item main-header__nav__item-sm pe-0">
+                                        {% if user.is_authenticated %}
+                                        <a class="main-header__links main-header__links-sm main-header__links__sign-in main-header__links__sign-in-sm" href="/logout/">Log Out</a>
+                                        {% else %}
+                                        <a class="main-header__links main-header__links-sm main-header__links__sign-in main-header__links__sign-in-sm" href="/login/">Log In</a>
+                                        {% endif %}
+                                    </li>
+                                </ul>
+                            </div>
+                        </aside>
+                    </nav>
+                </div>
+            </div>
+        </header>
+    </div>
+</div>

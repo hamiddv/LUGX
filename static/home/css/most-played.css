@@ -1,0 +1,27 @@
+.most-played-container {
+    background: #f7f7f7;
+    border-radius: 150px;
+    margin-top: 150px;
+    padding: 10rem 0
+}
+
+.most-played__cart {
+    cursor: pointer;
+    background: white;
+}
+
+.most-played__cart:hover .most-played__cart__explore {
+    background: var(--background-blue);
+}
+
+.most-played__cart:hover .most-played__cart__title {
+    color: var(--background-blue) !important;
+}
+
+.most-played__cart__category {
+    color: var(--color-muted);
+}
+
+.most-played__cart__explore {
+    transform: translateY(25px);
+}

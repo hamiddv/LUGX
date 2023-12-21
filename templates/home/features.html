@@ -1,0 +1,15 @@
+{%load static%}
+<section class="container">
+  <div class="row g-4 justify-content-around">
+    {% for feature in features %}
+        <div class="col-lg-3 col-md-6 col-12">
+          <figure class="shadow rounded-5 feature">
+            <div class="rounded-circle feature__image-container">
+              <img alt="feature" class="feature__image-container__image" src="media/{{feature.logo}}"/>
+            </div>
+            <figcaption class="fs-4 pt-4 fw-bold">{{feature.name}}</figcaption>
+          </figure>
+        </div>
+    {% endfor %}
+  </div>
+</section>

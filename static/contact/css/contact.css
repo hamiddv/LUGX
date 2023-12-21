@@ -1,0 +1,20 @@
+.contact-card {
+    background: #f7f7f7;
+}
+
+.contact-card__info {
+    color: #AAAAAA;
+}
+
+.contact-input {
+    background: #f7f7f7;
+    padding: 1rem;
+    color: #4a4a4a;
+    font-size: 15px;
+}
+
+.contact-input::placeholder {
+    color: #4a4a4a;
+    font-size: 15px;
+    font-family: "Poppins", Sans-Serif;
+}

@@ -1,0 +1,71 @@
+{% load static %}
+<main class="container-fluid mt-5 pt-5">
+    <div class="container">
+        <article class="row">
+            <figure class="col-12 pb-4 pe-4 col-lg-6">
+                <img width="100%"
+                     src="{% get_media_prefix %}{{game.detail_image}}"/>
+            </figure>
+            <section class="col-12 d-flex flex-column justify-content-center col-lg-6 p-4">
+                <h2 class="fw-bold">{{game.name}}</h2>
+                {% if game.discount_percent is int %}
+                <span class="fs-5 me-2 product__prev-price">${{game.price}}</span>
+                <span class="fs-2 fw-bold product__price">${{game.discounted_price}}</span>
+                {% else %}
+                <span class="fs-2 fw-bold product__price">${{game.price}}</span>
+                {% endif %}
+                <p class="fs-6 lh-lg text-muted mt-5 pt-4">{{game.caption}}</p>
+                {% if game.is_active %}
+                    <div class="d-flex my-5 py-4">
+                        <input value="1" type="text"
+                            class="text-center me-4 fs-5 fw-light product__input rounded-pill form-control"/>
+                        <button class="d-flex justify-content-center align-items-center button button-large button-red button-white-color button-blue-hover">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white"
+                                class="bi bi-bag-fill mb-1" viewBox="0 0 16 16">
+                                <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1m3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4z"/>
+                            </svg>
+                            <span class="ms-2">ADD TO CART</span>
+                        </button>
+                    </div>
+                {% endif %}
+                <ul class="p-0">
+                    <li class="row mt-4 product__detail">
+                        <span class="col-4 product__detail__property">Game ID:</span>
+                        <span class="col-4 product__detail__value"> {{game.game_id}} </span>
+                    </li>
+                    <li class="row mt-4 product__detail">
+                        <span class="col-4 product__detail__property">Genre:</span>
+                        <span class="col-4 product__detail__value"> {% for genre in game.genres %} {{genre.genre}}, {% endfor %}</span>
+                    </li>
+                    <li class="row mt-4 product__detail">
+                        <span class="col-4 product__detail__property">Multi-tags:</span>
+                        <span class="col-4 product__detail__value"> {% for tag in game.tags %} {{tag.tag}},  {% endfor %}</span>
+                    </li>
+                </ul>
+            </section>
+        </article>
+        <hr class="hr"/>
+    </div>
+</main>
+<section class="container-fluid">
+    <div class="container">
+        <div class="p-5 rounded-4 about-product">
+            <header>
+                <ul class="list-group list-group-horizontal">
+                    <li class="list-group-item about-product__heading about-product__heading-active">
+                        <span data-heading="Description" class="fs-4 js-about-product-headings" style="cursor: pointer">Description</span>
+                    </li>
+                    <!-- <li class="list-group-item about-product__heading ">
+                        <span data-heading="Reviews" class="fs-4 js-about-product-headings" style="cursor: pointer">Reviews (3)</span>
+                    </li> -->
+                </ul>
+            </header>
+            <section class="mt-3 p-3 lh-lg fs-6 text-muted">
+                <p data-heading-text="Description" id="about-product__text-active"
+                   class="about-product__text-active">
+                    {{game.description}}
+                </p>
+            </section>
+        </div>
+    </div>
+</section>

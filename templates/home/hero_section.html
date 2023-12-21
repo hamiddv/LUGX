@@ -1,0 +1,45 @@
+{% load static %}
+<section id="hero-section" class="hero-section container-fluid">
+    <div class="container">
+        <div class="row banner__row">
+            <article class="banner__article align-items-center align-items-lg-start col-lg-6 text-white">
+                <h5 class="mb-4 text-lg-start text-center">
+                    WELCOME TO LUGX
+                </h5>
+                <h1 class="fw-bold display-4 text-lg-start text-center">
+                    BEST <span class="display-4 fw-bold position-relative">
+                        GAMING
+                        <img height="12" width="203" class="position-absolute banner__article__gaming-underline-image start-0 top-100"
+                             src={% static "home/images/caption-dec.png" %}
+                             alt="gaming">
+                    </span> SITE EVER!
+                </h1>
+                <p class="pt-5 lh-lg text-lg-start text-center">LUGX Gaming is free Bootstrap 5 HTML CSS website
+                    template for your gaming
+                    websites. You can
+                    download and use this layout for commercial purposes. Please tell your friends about
+                    TemplateMo.</p>
+                <div class="w-75 input-container mt-5">
+                    <label class="position-relative w-100">
+                        <input placeholder="Type Something" type="text" class="w-100 input-container__input"/>
+                    </label>
+                    <button class="button button-blue-hover button-large button-red button-white-color position-absolute end-0">SEARCH NOW</button>
+                </div>
+            </article>
+            <section class="col-lg-6 d-lg-flex d-none align-items-center mt-lg-0 mt-5 d-flex justify-content-around">
+                <div class="d-flex justify-content-lg-end justify-content-center w-100 row">
+                    <div class="col-12 p-0 position-relative col-lg-8">
+                        <img width="410" height="500" src="media/{{most_discount.most_discounted_image}}" alt="game"
+                             class="rounded-5 top-0 w-100"/>
+                        <div class="image-transform rounded-circle text-white banner__image__discount">
+                            <span class="fw-bold fs-2">-{{most_discount.discount_percent}}%</span>
+                        </div>
+                        <div class="fw-bold image-transform rounded-pill text-white image__price position-absolute end-0 top-0">
+                            <span class="m-0 fw-bold fs-4">${{most_discount.discounted_price}}</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+</section>

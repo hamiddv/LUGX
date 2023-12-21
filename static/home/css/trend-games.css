@@ -1,0 +1,40 @@
+
+.trend-games__cart {
+    background: #eeeeee;
+    cursor: pointer;
+    transition: all ease 1s;
+}
+
+.trend-games__cart:hover .trend-games__cart__buy {
+    background: var(--background-blue);
+}
+
+.trend-games__cart:hover .trend-games__cart__title {
+    color: var(--background-blue);
+}
+
+.trend-games__cart__detail {
+    padding: 1.5rem;
+}
+
+.trend-games__cart__detail__genre {
+    color: var(--color-muted);
+}
+
+.trend-games__cart__buy {
+    background: var(--background-red);
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all ease .5s;
+}
+
+.trend-games__cart__prev-price{
+    text-decoration: line-through;
+}
+.trend-games__cart__image{
+    width: 100%;
+}
+

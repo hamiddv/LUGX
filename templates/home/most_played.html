@@ -1,0 +1,50 @@
+{% load static %}
+<div class="most-played-container container-fluid">
+  <section class="container">
+    <header class="d-flex">
+      <div>
+        <span class="fw-bold fs-6 mb-4 header__title">TOP GAMES</span>
+        <h1 class="fw-bold mt-3 m-0">Most Played</h1>
+      </div>
+      <div class="ms-auto mt-auto">
+        <a
+          href="#"
+          class="text-decoration-none d-flex align-items-center button button-blue-hover button-large button-red button-white-color"
+          >VIEW ALL</a
+        >
+      </div>
+    </header>
+    <div class="row g-5 mt-5">
+      {% for mp in most_played %}
+      <div class="col-xl-2_4 col-lg-4 col-md-6 col-12">
+      <a href="#"class="text-decoration-none text-black">
+        <article class="most-played__cart rounded-5">
+          <figure class="text-center">
+            <img
+              width="190"
+              height="190"
+              class="rounded-5 w-100"
+              alt="top-game"
+              src="{% get_media_prefix %}{{mp.most_played_image}}"
+            />
+          </figure>
+          <header class="text-center">
+            <p class="most-played__cart__category mb-0 pt-2">{{mp.category}}</p>
+            <span class="fs-5 fw-bold most-played__cart__title"
+              >{{mp.name}}</span
+            >
+          </header>
+          <footer class="d-flex justify-content-center">
+            <button
+              class="button button-blue-hover button-large button-red button-white-color most-played__cart__explore"
+            >
+              EXPLORE
+            </button>
+          </footer>
+        </article>
+      </a>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+</div>

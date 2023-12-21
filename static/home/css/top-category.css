@@ -1,0 +1,8 @@
+.top-category{
+    background: var(--background-blue);
+}
+
+.top-category__title{
+    padding: 1.5rem;
+    font-weight: bold;
+}

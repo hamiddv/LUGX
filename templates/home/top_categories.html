@@ -1,0 +1,30 @@
+<div class="container-fluid">
+  <section class="container mt-5 pt-5">
+    <header class="d-flex justify-content-center">
+      <div>
+        <span class="fw-bold mb-4 d-block fs-6 header__title text-center"
+          >CATEGORIES</span
+        >
+        <h1 class="fw-bold m-0 text-center">Top Categories</h1>
+      </div>
+    </header>
+    <div class="row g-5 mt-5">
+      {% for top_category in top_categories %}
+      <div class="col-xl-2_4 col-lg-4 col-md-6 col-12">
+        <figure class="top-category rounded-5">
+          <figcaption class="top-category__title fs-6 text-center text-white">
+            {{top_category.name}}
+          </figcaption>
+          <img
+            width="235"
+            height="220"
+            alt="top-category"
+            class="rounded-5 w-100"g
+            src="media/{{top_category.image}}"
+          />
+        </figure>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+</div>

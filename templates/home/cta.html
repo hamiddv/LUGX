@@ -1,0 +1,46 @@
+{%load static%}
+<div class="container-fluid">
+    <section class="container mt-5 pt-5">
+        <div class="row g-5 position-relative mt-5 pt-5">
+            <div class="col-lg-5 col-12">
+                <article class="shop-cart rounded-5 transform-none" style="transform: translate(0rem,5rem)">
+                    <header>
+                        <span class="fw-bold fs-6 mb-4 header__title">OUR SHOP</span>
+                        <h1 class="fw-bold mt-3 m-0">Go Pre-Order Buy & Get Best <span class="fs-1 fw-bold"
+                                                                                       style="color: var(--background-blue)">Prices</span>
+                            For You!</h1>
+                        <p class="fw-bold pt-5 fs-6 shop-cart__caption">Lorem ipsum dolor consectetur adipiscing, sed do
+                            eiusmod tempor incididunt.</p>
+                    </header>
+                    <footer class="mt-5">
+                        <button class="button button-blue-hover button-large button-red button-white-color">SHOP NOW</button>
+                    </footer>
+                </article>
+            </div>
+            <div class="start-25 z-n1 col-2 d-none d-lg-block position-absolute">
+                <figure class="">
+                    <img width="550" height="510" class="rounded-5" src={% static "home/images/cta-bg.jpg" %} alt="cta"/>
+                </figure>
+            </div>
+            <div class="col-lg-5 offset-lg-2 offset-0 col-12">
+                <article class="shop-cart rounded-5 transform-none" style="transform: translateY(13rem)">
+                    <header>
+                        <span class="fw-bold fs-6 mb-4 header__title">NEWSLETTER</span>
+                        <h1 class="fw-bold mt-3 m-0">Get Up To $100 Off Just Buy <span class="fs-1 fw-bold"
+                                                                                       style="color: var(--background-blue)">Subscribe </span>
+                            Newsletter!</h1>
+                    </header>
+
+                    <footer class="mt-5">
+                        <div class="w-100 input-container mt-5">
+                            <label class="position-relative w-100">
+                                <input placeholder="Your Email..." type="text" class="w-100 input-container__input"/>
+                            </label>
+                            <button style="width: calc(10rem + 1vw);" class="button button-blue-hover button-large  button-red button-white-color position-absolute end-0">SUBSCRIBE NOW</button>
+                        </div>
+                    </footer>
+                </article>
+            </div>
+        </div>
+    </section>
+</div>

@@ -1,0 +1,161 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: Poppins, sans-serif;
+    padding: 0;
+    font-size: 14px;
+}
+
+html {
+    --background-blue: #0071f8;
+    --background-red: #ee626b;
+    --background-glass: rgba(255, 255, 255, 0.10);
+    --color-muted: #7B7A7B;
+    --background-low-blue: #018AF8;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.input-container {
+    position: relative;
+}
+
+.input-container__input {
+    height: 50px;
+    padding-right: 11rem;
+    padding-left: 2rem;
+    border-radius: 30px;
+    border: none;
+    outline: none;
+    color: #7A7A7B;
+    font-weight: 400;
+}
+
+.start-25 {
+    left: 25%;
+}
+
+.button {
+    display: inline-block;
+    border-radius: 25px;
+    border: none;
+    font-size: 1rem;
+    padding: 0 1.5rem;
+    font-weight: 600;
+    transition: all ease .5s;
+}
+
+.button-red {
+    background: var(--background-red);
+}
+
+.color-red {
+    color: var(--background-red);
+}
+
+.button-large {
+    height: 50px;
+}
+
+.button-small {
+    height: 35px;
+}
+
+.button-white-color {
+    color: white;
+}
+
+.button-blue-hover:hover {
+    background: var(--background-blue);
+}
+
+.button-red-text-hover:hover {
+    color: var(--background-red);
+}
+
+
+.header__title {
+    color: var(--background-red);
+}
+
+
+@media (min-width: 1200px) {
+    .col-xl-2_4 {
+        width: 20% !important;
+    }
+}
+
+@media (max-width: 992px) {
+    .transform-none {
+        transform: none !important;
+    }
+}
+
+.hero-section__heading {
+    font-size: calc(1.5rem + 2.5vw);
+}
+
+.account__title{
+    font-size: calc(2rem + 1vw);
+    font-weight: bold;
+    text-align: center;
+    margin-top: 100px;
+    color: var(--background-blue);
+}
+.account__input{
+    width: 100%;
+    padding: .7rem .9rem;
+    border-radius: 10px;
+    margin-top: 1rem;
+    border: 1px solid var(--background-blue);
+    outline: none;
+}
+
+.account__input::placeholder{
+    color: #898989;
+}
+.account__form{
+    max-width: 25rem;
+    width: 100%;
+}
+.w-fit{
+    width: fit-content;
+}
+
+.account__button{
+    width: 100%;
+    padding: .7rem;
+    border-radius: 10px;
+    background: var(--background-red);
+    border: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: white;
+}
+.account__input-disable{
+    background: #ccc;
+}
+
+.account__logo{
+    width: calc(159px + 5vw);
+    height: calc(60px + 2vw);
+}
+
+.invalid{
+    color: var(--background-red);
+    margin-top: .5rem;
+}
+
+.logo-footer{
+    height: 20vh;
+    background:var(--background-blue);
+    border-top-left-radius: 150px;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}

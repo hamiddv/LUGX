@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+            name="description"
+            content="Mary's simple recipe for maple bacon donuts
+               makes a sticky, sweet treat with just a hint
+               of salt that you'll keep coming back for.">
+
+    <link rel="stylesheet" href={%static "global/css/global.css"%}/>
+    <link rel="stylesheet" href={%static "global/css/header.css"%}/>
+    <link rel="stylesheet" href={%static "global/css/footer.css"%}/>
+    <link rel="stylesheet" href={%static "home/css/hero-section.css"%}/>
+    <link rel="stylesheet" href={%static "home/css/trend-games.css"%}/>
+    <link rel="stylesheet" href={%static "bootstrap/css/bootstrap.min.css"%}/>
+    <link rel="stylesheet" href={%static "contact/css/contact.css" %}/>
+    <script src={%static "bootstrap/js/bootstrap.min.js" %}></script>
+</head>
+
+<body>
+{% include "contact-us/header.html" %}
+
+{% include "contact-us/hero_section.html" %}
+
+<section class="container-fluid mt-5 pt-5">
+  <div class="container">
+      <div class="row">
+          <div class="col-lg-6 d-flex flex-column justify-content-center">
+              <article class="contact-card p-5 rounded-4">
+                    <span class="fs-6 fw-bold" style="color: var(--background-red)">CONTACT US</span>
+                  <h1 class="mt-4 fw-bold">Say Hello!</h1>
+                  <p class="my-5 py-2 lh-lg text-muted">
+                      LUGX Gaming Template is based on the latest Bootstrap 5 CSS framework.
+                      This template is provided by TemplateMo and it is suitable for
+                      your gaming shop ecommerce websites. Feel free to use this for
+                      any purpose. Thank you.
+                  </p>
+                  <div class="">
+                      <span class="fs-6 fw-bold mb-2 d-block">Address</span>
+                      <span class=" contact-card__info fs-5 d-block">Sunny Isles Beach, FL 33160, United States</span>
+                  </div>
+                  <div class="mt-5">
+                      <span class="fs-6 fw-bold mb-2 d-block">Phone</span>
+                      <span class="fs-5 contact-card__info  d-block">+123 456 7890</span>
+                  </div>
+                  <div class="mt-5">
+                      <span class="fs-6 fw-bold mb-2 d-block">Email</span>
+                      <span class="fs-5 contact-card__info  d-block">lugx@contact.com</span>
+                  </div>
+              </article>
+          </div>
+          <div class="col-lg-6 px-5 mt-lg-0 mt-5 pt-lg-0 pt-5">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d207344.07543691967!2d51.1828477435309!3d35.707740216648176!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f8e00491ff3dcd9%3A0xf0b3697c567024bc!2sTehran%2C%20Tehran%20Province%2C%20Iran!5e0!3m2!1sen!2suk!4v1701791463647!5m2!1sen!2suk" width="100%" class="rounded-4" height="300px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              
+              <form class="mt-2 g-5 row" method="POST">
+                {% csrf_token %}
+                    <div class="col-lg-6">
+                        {{form.name}}
+                    </div>
+                    <div class="col-lg-6">
+                        {{form.surname}}
+                    </div>
+                    <div class="col-lg-6">
+                        {{form.email}}
+                    </div>
+                    <div class="col-lg-6">
+                        {{form.subject}}
+                    </div>
+                    <div class="col-12">
+                        {{form.message}}   
+                    </div>
+                    <div>
+                        <button class="button button-large button-white-color button-blue-hover button-red" type="submit">SEND MASSAGE NOW</button>
+                    </div>
+              </form>
+          </div>
+      </div>
+  </div>
+</section>
+<footer class="main-footer">
+    <div class="pt-5 d-flex justify-content-center">
+        <p class="text-center main-footer__text text-white">Copyright © 2048 LUGX Gaming Company. All rights reserved.
+            Design:
+            TemplateMo</p>
+    </div>
+</footer>
+<script src="/static/gsap/dist/gsap.min.js"></script>
+<script src="/static/gsap/dist/ScrollTrigger.min.js"></script>
+<script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+<script src={%static "global/js/index.js" %}></script>
+<script src={%static "shop/js/index.js" %}></script>
+</body>
+
+</html>
